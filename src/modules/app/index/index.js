@@ -2,6 +2,8 @@ const $ = require('jquery');
 const artT = require('art-template');
 
 const Exm = require('../../components/_example/example.js');
+const Draw = require('../../components/draw/draw.js');
+const Utils = require('../../lib/utils.js');
 
 require('./index.less');
 
@@ -32,4 +34,10 @@ require('./index.less');
   }
 
   render();
+  let d = new Draw({
+    ele: '#test',
+    width: 300,
+    height: 400,
+  });
+  d.onDrawLine();
 })();
