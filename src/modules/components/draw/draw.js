@@ -58,6 +58,7 @@ class Draw {
       getPointA(e, _opt);
       state.move = true;
     });
+
     $(option.ele).on('mousemove', (e) => {
       if (!this.state.drawLine) {
         // console.log('取消划线监听2');
@@ -70,6 +71,7 @@ class Draw {
       getPointB(e, _opt);
       this.drawLine(_opt);
     });
+
     $(option.ele).on('mouseup', (e) => {
       if (!this.state.drawLine) {
         // console.log('取消划线监听2');
@@ -84,16 +86,6 @@ class Draw {
   offDrawLine() {
     this.state.drawLine = false;
     console.log('取消划线监听');
-  }
-
-  // 原型方法，由Draw生产的对象直接调用
-  doSomething() {
-    console.log('do sth 1');
-  }
-
-  // 静态方法，可通过Draw类直接调用
-  static doSomething() {
-    console.log('do sth 2');
   }
 
   // set方法，改变option值触发
