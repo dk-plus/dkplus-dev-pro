@@ -78,8 +78,7 @@ const _config = {
     plugins: [
         extractLess,
         htmlExtract,
-        cleanWebpackPlugin,
-        uglifyJs
+        cleanWebpackPlugin
     ]
 }
 
