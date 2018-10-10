@@ -16,10 +16,15 @@ const BouncingBall = (() => {
     console.log('bouncing ball');
     createCanvas({
       id: 'bcball',
-      width: 400,
-      height: 300,
+      width: window.innerWidth,
+      height: window.innerHeight,
     });
     console.log(ele.CANVAS_WRAPPER);
+    initDraw();
+    initEvent();
+  }
+
+  function initDraw() {
     line({
       x1: 100,
       y1: 30,
@@ -33,7 +38,7 @@ const BouncingBall = (() => {
       y: 50,
       width: 200,
       height: 90,
-      // color: '#000',
+      color: '#000',
       bg: '#00ff00'
     });
     circle({
@@ -136,6 +141,39 @@ const BouncingBall = (() => {
   // $函数
   function $(element) {
     return document.querySelector(element);
+  }
+
+  function getPoint() {
+    const screen = {
+      x1: undefined,
+      y1: undefined,
+      x2: undefined,
+      y2: undefined,
+    }
+    $(`#${ele.CANVAS_WRAPPER.id}`).addEventListener('mousedown', (e) => {
+      screen.x1 = e.pageX;
+      screen.y1 = e.pageY;
+      console.log(screen)
+    });
+    // $(`#${ele.CANVAS_WRAPPER.id}`).addEventListener('mousemove', (e) => {
+    //   screen.x2 = e.pageX;
+    //   screen.y2 = e.pageY;
+    //   console.log(screen)
+    // });
+    $(`#${ele.CANVAS_WRAPPER.id}`).addEventListener('mouseup', (e) => {
+      screen.x2 = e.pageX;
+      screen.y2 = e.pageY;
+      console.log(screen)
+    });
+  }
+
+  function initEvent() {
+    window.addEventListener('resize', () => {
+      ele.CANVAS_WRAPPER.width = window.innerWidth;
+      ele.CANVAS_WRAPPER.height = window.innerHeight;
+      initDraw();
+    });
+    getPoint();
   }
 
   return _e;
