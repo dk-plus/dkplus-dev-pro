@@ -3,7 +3,8 @@
  */
 const $ = require('jquery');
 const artT = require('art-template');
-const BouncingBall = require('../../components/bouncing_ball/bouncing_ball.js');
+// const BouncingBall = require('../../components/bouncing_ball/bouncing_ball.js');
+const Resume = require('../../components/resume/resume.js');
 
 require('./index.less');
 
@@ -17,7 +18,8 @@ const Render = (() => {
   _e.init = () => {
     console.log('render init...');
     render();
-    BouncingBall.init();
+    // BouncingBall.init();
+    Resume.init();
   }
 
   function render() {
