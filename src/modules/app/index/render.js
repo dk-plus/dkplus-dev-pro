@@ -4,7 +4,8 @@
 const $ = require('jquery');
 const artT = require('art-template');
 // const BouncingBall = require('../../components/bouncing_ball/bouncing_ball.js');
-const Resume = require('../../components/resume/resume.js');
+// const Resume = require('../../components/resume/resume.js');
+const Resume = require('../../components/resume/dkresume.js');
 
 require('./index.less');
 

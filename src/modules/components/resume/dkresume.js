@@ -39,14 +39,14 @@ const Resume = (() => {
 
   // 渲染函数
   function render() {
-    const tpl = require('./resume.tpl')();
+    const tpl = require('./dkresume.tpl')();
     const tplRender = artT.compile(tpl);
 
     $(ele.ROOT).html(tplRender(_g.data));
   }
 
   function renderWrapperForm() {
-    require('./component_form.js').forEach((item) => {
+    require('./resume_form.js').forEach((item) => {
       const { id, title, content } = item;
       new Wrapper({
         id, title, content

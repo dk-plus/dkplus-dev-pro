@@ -7,3 +7,4 @@
 <div id="key-value-map-list"></div>
 <div id="progress-list"></div>
 <div id="mix-title"></div>
+<div id="avater-list"></div>

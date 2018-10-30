@@ -5,7 +5,7 @@
       <div class="label">{{item.key}}：</div>
       {{if item.type === 'link'}}
         <div class="value">
-          <a href={{item.value}}>{{item.value}}</a>
+          <a href="http://{{item.value}}">{{item.value}}</a>
         </div>
       {{else}}
         <div class="value">{{item.value}}</div>
