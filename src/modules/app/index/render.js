@@ -5,7 +5,8 @@ const $ = require('jquery');
 const artT = require('art-template');
 // const BouncingBall = require('../../components/bouncing_ball/bouncing_ball.js');
 // const Resume = require('../../components/resume/resume.js');
-const Resume = require('../../components/resume/dkresume.js');
+// const Resume = require('../../components/resume/dkresume.js');
+const Slider = require('../../components/slider/slider.js');
 
 require('./index.less');
 
@@ -20,7 +21,8 @@ const Render = (() => {
     console.log('render init...');
     render();
     // BouncingBall.init();
-    Resume.init();
+    // Resume.init();
+    Slider.init();
   }
 
   function render() {
