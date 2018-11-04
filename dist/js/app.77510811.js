@@ -11809,7 +11809,7 @@ var Slider = function () {
 
   // 全局操作数据
   var _g = {
-    cur: Number(location.hash.match(/\d+/)[0]) || 1
+    cur: location.hash.match(/\d+/) && Number(location.hash.match(/\d+/)[0]) || 1
   };
 
   // 枚举
